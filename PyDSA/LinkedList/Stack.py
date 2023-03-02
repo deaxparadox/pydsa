@@ -1,11 +1,16 @@
+from rich.panel import Panel
+import rich 
+from rich.emoji import Emoji
+from rich.box import Box
 from typing import Any
 from ..EmptyClass import BaseStack
 
 class Node(object):
     def __init__(self, data: Any) -> None:
         self.data: Any = data 
-        self.nex: self  = None
-
+        self._nex: self  = None
+    
+    
 
 class Stack(BaseStack):
     def __init__(self):
@@ -20,7 +25,7 @@ class Stack(BaseStack):
         return self.__len == len(other)
 
     def __str__(self):
-        return f"[ {self.print(ret=True)} ]"
+        return f"[{self.print(ret=True)}]"
 
     def __repr__(self):
         return self.__str__()
@@ -30,7 +35,7 @@ class Stack(BaseStack):
         for i in range(index):
             if temp is None:
                 raise IndexError("Index exceed length")
-            temp = temp.nex
+            temp = temp._nex
         return temp.data
 
     def __setitem__(self, index: int, data: Any) -> None:
@@ -38,8 +43,12 @@ class Stack(BaseStack):
         for i in range(index):
             if temp is None:
                 raise IndexError("Index exceed length")
-            temp = temp.nex
+            temp = temp._nex
         temp.data = data
+
+    @property
+    def data(self):
+        return self.__tail.data
 
     def append(self, data):
         # new node 
@@ -50,7 +59,7 @@ class Stack(BaseStack):
             self.__tail = self.__head = new_node
             self.__len += 1
         else:
-            new_node.nex = self.__tail 
+            new_node._nex = self.__tail 
             self.__tail = new_node
             self.__len += 1
             
@@ -59,7 +68,7 @@ class Stack(BaseStack):
         if self.__tail is None:
             raise IndexError("Stack is empty.")
         temp, data = self.__tail, self.__tail.data
-        self.__tail = self.__tail.nex
+        self.__tail = self.__tail._nex
         self.__len -= 1
         del temp
         return data
@@ -72,9 +81,9 @@ class Stack(BaseStack):
         #     if ptr.data == data:
         #         print("found match")
         #         data = ptr.data
-        #         nex.nex = ptr.nex
+        #         nex._nex = ptr._nex
         #     nex = ptr
-        #     ptr = ptr.nex
+        #     ptr = ptr._nex
 
         # del nex
         # del ptr
@@ -85,11 +94,11 @@ class Stack(BaseStack):
         while ptr:
             if ptr.data == data:
                 # print("found match")
-                nex.nex = ptr.nex
+                nex._nex = ptr._nex
                 self.__len -= 1
                 break
             nex = ptr
-            ptr = ptr.nex
+            ptr = ptr._nex
         if ptr is None:
             raise ValueError("Value not found.")
 
@@ -103,13 +112,19 @@ class Stack(BaseStack):
         while temp:
             # print(temp.data, end=", ")
             lst.append(str(temp.data))
-            temp = temp.nex
-        lst = ", ".join(lst)
+            temp = temp._nex
+        lst = ",".join(lst)
         if ret:
             return lst
         else:
             print(lst)
-
+        # rich.print(
+        #     Panel(
+        #         ",".join([str(x) for x in self]), 
+        #         border_style="cyan", 
+        #         expand=False
+        #     )
+        # )
     
     def is_empty(self):
         return self.__len == 0
@@ -121,7 +136,7 @@ class Stack(BaseStack):
         if self.__iter is None:
             raise StopIteration
         data = self.__iter.data
-        self.__iter = self.__iter.nex
+        self.__iter = self.__iter._nex
         return data
 
     def __enter__(self):

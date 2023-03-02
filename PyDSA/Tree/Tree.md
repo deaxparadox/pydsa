@@ -1,118 +1,71 @@
-# Tree Data Structure
+# Tree Data Structure and Algorithm Tutorials
 
-A tree structure consists of nodes and edges that organize data in a hierarchial fashion.
+### What is a Tree data structure ?
 
-The relatioships between data elements in a tree are similar to those of a family tree: "child", "parent", "ancestor", etc.\
+A **tree data structure** is a hierarcical structure that is used to represent and organised data is a way taht is easy to navigate and search. It is a collectino of nodes that are connected by adges and has a hierarchical relationship between the nodes. 
 
-The data elements are stored in **nodes** and apris of nodes are connect by **edges**.
+The topmost ndoe of that tree is called the root, and the nodes below it are called the child nodes. Each nodes can have multiple child nodes, and these child nodes cal also have their own child nodes, forming a recursive structure.
 
-The edges represent the relationship between the nodes that are linked with arrows or directed edges to form a **hierarchical structure** resembling an upside-down tree complete with branches, leaves, and even a root.
+### Recusive Definition
 
-Example is the UNIX file system.
+A tree consists of a root, and zero or more subtrees T1, T2, ..., Tk such there is an edge from the root of the tree to the root of each subtree.
 
 
-#### Root 
+### Tree are non linear data structure
 
-The topmost node of the tree is konwn as the **root node**. It provides the signle access point into the structure.
+The data in a tree are arranged on  multiple levels (hierarhical structrue).
 
-Every non-empty tree must contain a root node.
+### Structure
 
+![image not found](TreeDataStructure.png "Binary Tree")
 
-#### Path 
+### Basic Terminology
 
-The other nodes in the tree are accessed by following the edges starting with the root and progressing in the direction of the arrow untill the destination node is reached.
+- **Parent Node:** The node which is a predecessor of a node is called the parent node of that node.
+- **Child Node:** The ndoe which is the immediate successor of a node is calld the child node of the node.
+- **Root Node:** The topmost node of a tree or  the node which does not have any parent node is called the root node. A non-empty Tree must contain exactly one root node and exactly one path from the root to all other nodes of the tree.
+- **Leaf Node or External Node:** The nodes which do not have any child nodes are called leaf nodes.
+- **Ancestor of a Node:** Any predecessor nodes on the path of the root to that are called Ancestors of that nodes.
+- **Descendant:** Any successor node on the path from tht leaf node to that node.
+- **Sibling:** Children of the same parent node are called siblings.
+- **Level of a node:** The cound of edges on the path from the root node to that node. The root node has level 0.
+- **Internal node:** A node which at least one child is called Internal Node.
+- **Neighbour of a Node:** Parent or child nodes of that node are called neighbors of that node.
+- **Subtree:** Any node of that tree along with it decendant.
 
-The nodes encountered when following the edges from a starting node to a destination form a **path**.
+### Properties of a Tree;
 
+- **Number of edges:** An edge can be defined as the connection between two nodes. If a tree has N nodes then it will have (N-1) edges. There is only one path from each node to any other node of the tree.
+- **Depth of a node:** The depth of a node is defined as the lenght of the path from the root to that node. Each edge adds 1 unit of length to the path. So, it can also be be defined as the number of edges in the path from the root of the tree to that node.
+- **Height of a node:** The height of a node can be defined as the length of the longest path from the node to the leaf node of that tree.
+- **Height of the Tree:** The height of a tree is the length of the longest path from the root of the tree to a leaf node of the tree.
+- **Degree of a Node:** The total count of subtrees attached to that node is called the degree of the node. The degree of a leaf node must be 0. The degree of a tree is the maximum degree of a node amoung all the nodes in the tree.
 
-#### Parent
+#### Some more properites are:
 
-Evert node, except the root, has a **parent node**, which is identified by the incomming edge.
+- Traversing in a tree is done by depth frist search and breadth first search algorithm.
+- It has no loop and no circuit
+- It has not self-loop
+- Its hierarchical model.
 
+### Basic operation of Tree:
 
-#### Children
+- Create - create a tree in data structure
+- Insert - Inserts data in tree.
+- Search - Searches speicific data in a tree to check it is present or not.
+- Preorder Traversal - perform Traveling a tree is a pre-order manner in data structure.
+- In order Traversal - perform Traveling a tree in an in-order manner.
+- Post order Traversal - perform Traveling a tree in a post-order manner.
 
-Every node can have noe or more **child** node resulting in a parent-child relationship.
 
-All nodes that have the same parent are known as siblings.
+## Types of Tree data structures
 
-#### Nodes 
+The different types of tree data structures are as follows:
 
-Nodes that have at least noe child are known as **interior nodes** while nodes that have no children are known as **leaf nodes**.
+### General tree 
 
+A general tree data structure has no restriction on the number of nodes. It means that a parent node can have any number of child nodes.
 
-#### Subtree 
+### Binary tree 
 
-Every node can be the root of its own **subtree**, which consists of a subset of nodes and edges of the larger tree.
-
-
-#### Relative 
-
-All of the nodes in a subtree are descendants of the subtrees's root. 
-
-The ancestors of a node include the parent of the node, its grandparent, its great-grandparent, and so on all the way up to the root.
-
-The root node is the ancestor of every node in the tree and every node in the tree is a descendant of the root node.
-
-
-## Binary Tree
-
-A *binary tree* is a tree in which each node can have at most two children. One child is identified as the *left child* and the other as the *right child*
-
-
-### Properties 
-
-#### Tree Size
-
-The nodes in a binary tree are organized into *levels* with the root node at level 0, its children at level 1, the children of level one nodes are at level 2, and so on.
-
-The *depth* of a node is its distance from the root, with distance being the number of levels that separate the two.
-
-The *height* of a binary tree is the number of levels in the tree.
-
-The *width* of  binary tree is the number of nodes on the level containing the most nodes.
-
-The *size* of a binary tree is simpy the number of nodes in the tree.
-
-A binary tree of size n can have a maximun height of n, which results when there is one node per level.
-
-Tree with level *i* will have a capacity *2^i* nodes.
-
-The minimum height of a binary tree of size n is [log n base2] + 1
-
-
-### Tree Structure 
-
-#### Full binary Tree 
-
-It is a binary tree in which each interior node contains two children
-
-#### Perfect binary Tree 
-
-It is a full binary tree in which all leaf nodes are at the save level. The perfect tree has all possible node slots filled from top to bottom with no gaps.
-
-
-
-A binary tree of height *h* is a *complete binary tree* if it is perfect binary tree down to height *h* - 1 and the nodes on the lowest level fill the available slots from left to right leaving no gaps.
-
-
-### Tree Traversal
-
-##### Preorder Traversal 
-
-In pre-order traversal left subtree if always visited before the tright subtree.
-
-##### Inorder Traversal 
-
-In inorder traversal we first visit the left subtree, then visit the node followed by the traversal of the right subtree.
-
-##### Postorder Traversal 
-
-In postorder traversal subtrees are visited first then the node node is visited.
-
-
-#### Breadth-First Traversal
-
-The preorder, inorder, postorder traversals are all example of a **depth-first traversal**. That is, the nodes are traversed deeper in the tree before returning to higher-level nodes.
-
-In **breadth-first traversal**, the nodes are visited by level, from left to right.
+A node of a binary tree can have
