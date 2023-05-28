@@ -2,7 +2,7 @@ from unittest import TestCase
 import pytest
 import threading
 
-from PyDSA.LinkedList.Stack import Stack
+from pydsa.linear.stack import Stack
 
 
 class StackTestCase(TestCase):

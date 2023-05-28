@@ -1,9 +1,10 @@
 from typing import Any, TypeVar
 
-from .Node import DNode
+from .node import DNode
 
 
 ListSelf = TypeVar("List")
+
 class List:
     def __init__(self):
         self._head: DNode | None = None 

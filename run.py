@@ -15,7 +15,7 @@ class RPanel(object):
     def YellowBox(data: typing.Any | None = None):
         rich.print(Panel(f"[yellow]{data}[/yellow]", expand=False, border_style="yellow"))
 
-from PyDSA import Stack, Queue, Graph, List
+from pydsa import Stack, Queue, Graph, List
 
 class Func:
     stack: str = "stack"

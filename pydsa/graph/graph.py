@@ -1,7 +1,7 @@
 from typing import Any, TypeVar
 import warnings
 
-from PyDSA import Stack, Queue
+from pydsa import Stack, Queue
 
 
 

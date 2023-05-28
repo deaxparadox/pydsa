@@ -1,7 +1,7 @@
 import unittest
 import pytest
 
-from PyDSA.Tree.FullBinaryTree import (
+from pydsa.tree.full import (
     isFullTree as isFull,
     Node
 ) 
