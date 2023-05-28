@@ -2,3 +2,8 @@
 **/.pytest_cache
 **/.pytest_cache
 **/*.code-workspace
+build
+dist
+pydsa.egg-info
+**/venv
+src

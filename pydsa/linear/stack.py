@@ -3,7 +3,7 @@ import rich
 from rich.emoji import Emoji
 from rich.box import Box
 from typing import Any
-from ..EmptyClass import BaseStack
+from ..emptyclass import BaseStack
 
 class Node(object):
     def __init__(self, data: Any) -> None:
