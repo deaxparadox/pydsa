@@ -1,3 +1,4 @@
+import argparse
 import typing
 
 class prime(object):
@@ -36,9 +37,21 @@ class prime(object):
             raise StopIteration
         return self.__prime
 
+
+def argument():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-e", type=int, help="Provide stop")
+    return parser.parse_args()
+
 def main():
+    parser = argument()
     l = list()
-    for i in prime(20):
+
+    if parser.e:
+        stop = parser.e
+    else:
+        stop = 20
+    for i in prime(stop):
         l.append(i)
     return l
 
