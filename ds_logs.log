@@ -1,0 +1,34 @@
+06/23/2023 08:56:02 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 08:56:02 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 08:56:02 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 08:56:02 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 08:56:02 PM - parso.python.diff - DEBUG - diff parser end
+06/23/2023 08:56:06 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 08:56:06 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 08:56:06 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 08:56:06 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 08:56:06 PM - parso.python.diff - DEBUG - diff parser end
+06/23/2023 08:56:06 PM - parso.cache - DEBUG - pickle loaded: /home/creator/Documents/PythonDeveloper/Env/py310/lib/python3.10/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+06/23/2023 09:01:58 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 09:01:58 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 09:01:58 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 09:01:58 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 09:01:58 PM - parso.python.diff - DEBUG - diff parser end
+06/23/2023 09:02:02 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 09:02:02 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 09:02:02 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 09:02:02 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 09:02:02 PM - parso.python.diff - DEBUG - diff parser end
+06/23/2023 09:02:02 PM - parso.cache - DEBUG - pickle loaded: /home/creator/Documents/PythonDeveloper/Env/py310/lib/python3.10/site-packages/jedi/third_party/typeshed/stdlib/3/builtins.pyi
+06/23/2023 09:03:51 PM - parso.cache - DEBUG - pickle loaded: /home/creator/Documents/PythonDeveloper/Env/py310/lib/python3.10/site-packages/jedi/third_party/typeshed/stdlib/3/builtins.pyi
+06/23/2023 09:03:51 PM - parso.cache - DEBUG - pickle loaded: /home/creator/Documents/PythonDeveloper/Env/py310/lib/python3.10/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+06/23/2023 09:03:59 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 09:03:59 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 09:03:59 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 09:03:59 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 09:03:59 PM - parso.python.diff - DEBUG - diff parser end
+06/23/2023 09:04:00 PM - parso.python.diff - DEBUG - diff parser start
+06/23/2023 09:04:00 PM - parso.python.diff - DEBUG - line_lengths old: 1; new: 1
+06/23/2023 09:04:00 PM - parso.python.diff - DEBUG - -> code[replace] old[1:1] new[1:1]
+06/23/2023 09:04:00 PM - parso.python.diff - DEBUG - parse_part from 1 to 1 (to 0 in part parser)
+06/23/2023 09:04:00 PM - parso.python.diff - DEBUG - diff parser end

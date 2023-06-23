@@ -3,24 +3,37 @@ from typing import Any, TypeVar
 from .node import DNode
 
 
-ListSelf = TypeVar("List")
+List = TypeVar("List", bound="List")
 
 class List:
     def __init__(self):
         self._head: DNode | None = None 
         self._tail: DNode | None = None
-        self._len = 0
+        self.__len = 0
 
     def __len__(self) -> int:
-        return self._len
+        return self.__len
+
+    def __string_form(self) -> str:
+        ret = "["
+        for i in self:
+            ret += f"{i},"
+        ret += "]"
+        return ret
 
     def __str__(self) -> str:
-        return 
+        return self.__string_form()
+    
+    def __repr__(self) -> str:
+        return self.__string_form()
 
     def __eq__(self, other: DNode) -> bool():
-        return self._len == len(other)
+        return self.__len == len(other)
     
-    def __iter__(self) -> ListSelf:
+
+    # iterator
+
+    def __iter__(self) -> List:
         self._iter: DNode = self._head
         return self 
     def __next__(self):
@@ -30,25 +43,28 @@ class List:
         self._iter = self._iter._next
         return data
 
-    def __enter__(self) -> ListSelf:
+    # context manager
+
+    def __enter__(self) -> List:
         return self 
     def __exit__(self):
         return 
 
+    
     def is_empty(self) -> bool:
-        return self._len == 0
+        return self.__len == 0
 
     def append(self, data: Any) -> None:
         new_node: DNode = DNode(data)
 
         if self._head is None and self._tail is None:
             self._head = self._tail = new_node
-            self._len += 1
+            self.__len += 1
         else:
             new_node._prev = self._tail
             self._tail._next = new_node
             self._tail = new_node
-            self._len += 1
+            self.__len += 1
 
     def pop(self):
         rem, data = self._tail, self._tail.data
@@ -62,12 +78,12 @@ class List:
 
         if self._head is None and self._tail is None:
             self._head = self._tail = new_node
-            self._len += 1
+            self.__len += 1
         else:
             new_node._next = self._head
             self._head._prev = new_node
             self._head = new_node
-            self._len += 1
+            self.__len += 1
 
     def remove(self, data: Any | None = None):
         rem, data = self._head, self._head.data

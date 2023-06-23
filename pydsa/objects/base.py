@@ -1,5 +1,6 @@
 from typing import Any 
 from pydsa.logs import logging
+from .types import StringType, ListType
 
 BRANCH_LIMIT = 10
 
@@ -23,36 +24,22 @@ class BaseTree(object):
  
 
     """
-    def __init__(self, value: Any, limit: int|None = BRANCH_LIMIT):
-        self.value: Any = value 
+    def __init__(self, value: str, limit: int|None = BRANCH_LIMIT):
+        self.value: StringType = StringType(value) 
         self.limit: int = limit
 
-        self.before_branches: list[BaseTree] = []
-        self.after_branches: list[BaseTree] = []
+        self.branches: ListType[BaseTree] = ListType()
 
 
-    # features of branches
-    
-    def branch_length(self) -> int:
-        """
-        Returns the length of `after_branches`.
-        """
-        return len(self.after_branches)
 
     def is_branch_full(self) -> bool:
         """
         Return `True` is length of `after_branches` is greater than 
         or equal to `limit` (default to BRANCH_LIMIT = 10).
         """
-        return len(self.after_branches) >= self.limit
+        return len(self.branches) >= self.limit
 
-    # 
 
-    def length(self) -> int:
-        """
-        Return the length of `Tree` value.
-        """
-        return len(self.value)
     
     def weight(self) -> int:
         """

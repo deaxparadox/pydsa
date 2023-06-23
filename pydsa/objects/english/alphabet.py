@@ -56,3 +56,4 @@ class Alphabet(object):
                 AlphaWeight(alpha, weight)
             )
         return 
+    
