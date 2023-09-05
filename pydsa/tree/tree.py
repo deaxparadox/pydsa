@@ -8,27 +8,27 @@ class _BinTreeNode:
         self.left = None 
         self.right = None 
 
-def perorderTrav(subtree):
+def perorder(subtree):
     if subtree is not None:
         print(subtree.data)
-        perorderTrav(subtree.left)
-        perorderTrav(subtree.right)
+        perorder(subtree.left)
+        perorder(subtree.right)
 
-def inorderTrav(subtree):
+def inorder(subtree):
     if subtree is not None:
-        inorderTrav(subtree.left)
+        inorder(subtree.left)
         print(subtree.data)
-        inorderTrav(subtree.right)
+        inorder(subtree.right)
 
 
-def postorderTrav(subtree):
+def postorder(subtree):
     if subtree is not None:
-        postorderTrav(subtree.left)
-        postorderTrav(subtree.right)
+        postorder(subtree.left)
+        postorder(subtree.right)
         print(subtree.data)
 
 
-def breadthFirstTrav(bintree):
+def breadth_first_traversal(bintree):
     # Create a queue and add the root node to it.
     q = queue.Queue()
     q.put(bintree)
