@@ -1,11 +1,8 @@
 import typing
 
-def binary_search(seq: typing.Sequence|None = None, target: typing.Any|None = None,  *args):
+def binary_search(target: typing.Any,  seq: typing.Sequence, *args) -> None:
     if len(seq) == 0 and len(args) == 0:
         raise RuntimeError("no iterable bound.")
-    
-    if not target:
-        raise RuntimeError("target not found.")
 
     if len(seq) > 0:    
         start = 0
@@ -21,4 +18,4 @@ def binary_search(seq: typing.Sequence|None = None, target: typing.Any|None = No
             else:
                 return mid
 
-    return -1
+    return
