@@ -1,3 +1,4 @@
 pytest==7.4.3
 rich==13.6.9
 pygame==2.5.2
+ipython==8.16.1
