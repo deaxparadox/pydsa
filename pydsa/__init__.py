@@ -1,3 +1,5 @@
+print("pydsa imported successfully.")
+
 from pydsa.linear.stack import Stack
 from pydsa.linear.queue import  Queue
 from pydsa.graph.graph import Graph
